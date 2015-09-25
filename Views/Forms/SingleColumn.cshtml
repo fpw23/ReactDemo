@@ -1,0 +1,15 @@
+﻿@model ReactDemo.Models.FormPageModel
+@{
+    Layout = "~/Views/_mainLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        @if (Model.JSXControlProps == null)
+        {
+            @Html.React(Model.JSXControlName, new { })
+        } else
+        {
+            @Html.React(Model.JSXControlName, Model.JSXControlProps)
+        }
+    </div>
+</div>
